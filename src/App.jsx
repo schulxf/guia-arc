@@ -223,7 +223,7 @@ export default function App() {
 
         {/* CTA Mercurius Crypto Discreto */}
         <a 
-          href="https://analise.mercuriuscrypto.com/reset-cripto?utm_source=youtube&utm_medium=video&utm_campaign=reset-cripto&utm_content=descricao" 
+          href="https://reset.mercuriuscrypto.com/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="group flex flex-col sm:flex-row items-center justify-center gap-2 bg-[#111] hover:bg-[#151515] border border-gray-800 hover:border-gray-700 rounded-xl p-4 transition-all mb-8 text-center"
