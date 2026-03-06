@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { 
-  Droplet, ArrowRightLeft, Image as ImageIcon, Code, 
-  CheckCircle2, Circle, ExternalLink, ShieldCheck, 
-  ChevronDown, ChevronUp, Trophy, Globe, AlertTriangle, ArrowRight, Gamepad2
+import {
+  Droplet, ArrowRightLeft, Image as ImageIcon, Code,
+  CheckCircle2, Circle, ExternalLink, ShieldCheck,
+  ChevronDown, ChevronUp, Trophy, Globe, AlertTriangle, ArrowRight, Gamepad2, Wallet, Info
 } from 'lucide-react';
 import { Analytics } from '@vercel/analytics/react';
 
@@ -29,7 +29,7 @@ const tutorialSteps = [
       {
         id: 't1_3',
         title: 'Fazer Bridge de Tokens',
-        desc: 'Transfira seus fundos de outras redes de teste para a Arc Testnet usando a ponte oficial.',
+        desc: 'Transfira seus fundos de outras redes de teste para a Arc Testnet. Use a Ethereum Sepolia como rede de origem e a ponte oficial do Arc Playground para transferir seus tokens USDC/EURC.',
         link: 'http://arcplayground.netlify.app'
       }
     ]
@@ -235,6 +235,30 @@ export default function App() {
             Reset Cripto <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </span>
         </a>
+
+        {/* Seção de Pré-requisitos */}
+        <div className="bg-[#1a2b4c]/40 border border-[#4A90E2]/30 rounded-xl p-6 mb-12 flex gap-4">
+          <Info className="w-6 h-6 text-[#4A90E2] flex-shrink-0 mt-1" />
+          <div>
+            <h3 className="text-lg font-bold text-white mb-3 flex items-center gap-2">
+              <Wallet className="w-5 h-5" /> Pré-requisitos
+            </h3>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li className="flex items-start gap-2">
+                <span className="text-[#4A90E2] font-bold mt-0.5">•</span>
+                <span><strong>Carteira EVM:</strong> Você precisa de uma carteira compatível com redes EVM (Ethereum Virtual Machine)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#4A90E2] font-bold mt-0.5">•</span>
+                <span><strong>Recomendação:</strong> Use a <a href="https://rabby.io" target="_blank" rel="noopener noreferrer" className="text-[#4A90E2] hover:underline font-semibold">Rabby Wallet</a> (compatível com Arc e outras redes)</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-[#4A90E2] font-bold mt-0.5">•</span>
+                <span><strong>Tokens de Teste:</strong> Você receberá tokens de teste gratuitos via faucets nas primeiras fases</span>
+              </li>
+            </ul>
+          </div>
+        </div>
 
         {/* Estatísticas / Progresso */}
         <div className="mt-12 mb-8">
